@@ -1,0 +1,13 @@
+PODS:
+  - Hue (1.1.1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Hue
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Hue: 931aeeadcb29ce5de5b97589aa936be4638a1501
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

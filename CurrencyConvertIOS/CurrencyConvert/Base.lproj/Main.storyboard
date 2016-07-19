@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConvert" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-L0-7ch">
+                                <rect key="frame" x="28" y="0.0" width="544" height="174"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlS-E2-8RR">
+                                        <rect key="frame" x="506" y="42" width="30" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="USD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JHf-fe-b4A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3o-5L-Hz2">
+                                        <rect key="frame" x="506" y="99" width="30" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="EUR">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dH0-lk-CsX"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXP-Ad-jah" customClass="NumberFieldView" customModule="CurrencyConvert" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="42" width="482" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59y-rI-dZV" customClass="NumberFieldView" customModule="CurrencyConvert" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="99" width="482" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="D3o-5L-Hz2" secondAttribute="bottom" constant="42" id="F8s-dT-SuT"/>
+                                    <constraint firstItem="dXP-Ad-jah" firstAttribute="height" secondItem="NlS-E2-8RR" secondAttribute="height" id="Gp5-vw-gmo"/>
+                                    <constraint firstItem="59y-rI-dZV" firstAttribute="height" secondItem="D3o-5L-Hz2" secondAttribute="height" id="MAP-Bw-MXJ"/>
+                                    <constraint firstItem="D3o-5L-Hz2" firstAttribute="leading" secondItem="59y-rI-dZV" secondAttribute="trailing" constant="16" id="QSr-ry-mVM"/>
+                                    <constraint firstItem="NlS-E2-8RR" firstAttribute="top" secondItem="hpJ-L0-7ch" secondAttribute="top" constant="42" id="QUH-7N-9tK"/>
+                                    <constraint firstAttribute="trailing" secondItem="D3o-5L-Hz2" secondAttribute="trailing" constant="8" id="VAR-wi-6ax"/>
+                                    <constraint firstItem="dXP-Ad-jah" firstAttribute="centerY" secondItem="NlS-E2-8RR" secondAttribute="centerY" id="WBI-L2-lYP"/>
+                                    <constraint firstItem="59y-rI-dZV" firstAttribute="centerY" secondItem="D3o-5L-Hz2" secondAttribute="centerY" id="e19-C2-A45"/>
+                                    <constraint firstItem="NlS-E2-8RR" firstAttribute="leading" secondItem="dXP-Ad-jah" secondAttribute="trailing" constant="16" id="elo-Kn-SDb"/>
+                                    <constraint firstItem="dXP-Ad-jah" firstAttribute="leading" secondItem="hpJ-L0-7ch" secondAttribute="leading" constant="8" id="gGU-sC-NLD"/>
+                                    <constraint firstItem="D3o-5L-Hz2" firstAttribute="top" secondItem="NlS-E2-8RR" secondAttribute="bottom" constant="24" id="iIn-2j-2RG"/>
+                                    <constraint firstItem="59y-rI-dZV" firstAttribute="leading" secondItem="hpJ-L0-7ch" secondAttribute="leading" constant="8" id="j2G-UB-PKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="NlS-E2-8RR" secondAttribute="trailing" constant="8" id="nfL-Qf-LGL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yFz-Uj-RL7">
+                                <rect key="frame" x="0.0" y="168" width="600" height="432"/>
+                                <color key="backgroundColor" white="0.24092911073825504" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.15160968959731544" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hpJ-L0-7ch" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="SeH-cd-C8j"/>
+                            <constraint firstItem="yFz-Uj-RL7" firstAttribute="top" secondItem="hpJ-L0-7ch" secondAttribute="bottom" id="Tku-Mj-Sfv"/>
+                            <constraint firstItem="yFz-Uj-RL7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="YoI-8g-wzr"/>
+                            <constraint firstItem="hpJ-L0-7ch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="cb4-Jn-pSo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yFz-Uj-RL7" secondAttribute="bottom" id="mRv-fO-MrN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hpJ-L0-7ch" secondAttribute="trailing" constant="8" id="t37-yj-Xtd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yFz-Uj-RL7" secondAttribute="trailing" constant="-20" id="vhd-EF-3Ri"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fromButton" destination="NlS-E2-8RR" id="j8Z-4t-qwQ"/>
+                        <outlet property="fromNumberView" destination="dXP-Ad-jah" id="mD2-3h-TRN"/>
+                        <outlet property="numpadView" destination="yFz-Uj-RL7" id="SU3-W3-M3d"/>
+                        <outlet property="toButton" destination="D3o-5L-Hz2" id="phh-bF-aGg"/>
+                        <outlet property="toNumberView" destination="59y-rI-dZV" id="Het-aG-y2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="429"/>
+        </scene>
+    </scenes>
+</document>
